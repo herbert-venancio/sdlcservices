@@ -11,7 +11,7 @@ def onError() {
 	handleError(gitRepository, "gabriel.takeuchi@objective.com.br", "github_objective-solutions_sdlcservices")
 }
 
-node ("sdlcservices") {
+node ("sdlcservices||shared-pool") {
 	try {
 		stage('Checkout') {
 			checkout scm
